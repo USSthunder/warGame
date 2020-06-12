@@ -8,6 +8,17 @@ body {
   width: 10%;
 }
 
+.mobile {
+  display: none;
+}
+
+.wide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 img {
   width: 100%;
 }
@@ -67,6 +78,10 @@ input {
 
 .hidden {
   display: none;
+}
+
+.show {
+  display: block;
 }
 
 p {
@@ -146,5 +161,16 @@ p {
   .flexColumn {
     margin: 1rem;
     width: 90%;
+  }
+
+  .mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wide {
+    display:none;
   }
 }

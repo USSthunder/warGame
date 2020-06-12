@@ -364,13 +364,13 @@ function greater(){
 $("#mathOptions").on('click', function() {
     $(".hidden").css("display", "none");
     $("#options").css("display", "block");
-    $("#faceCards").css("display", "block");
+    $(".faceCards").css("display", "block");
 })
 
 $("#compare").on('click', function() {
     $("#options").css("display", "none");
     $("#integers").css("display", "block");
-    $("#compareDirections").css("display", "block");
+    $(".compareDirections").css("display", "block");
     compare = 1;
 })
 
@@ -393,22 +393,22 @@ $("#no").on('click', function() {
 $("#yes").on('click', function() {
     $("#integers").css("display", "none");
     $("#mathOptions").css("display", "none");
-    $("#integerDirections").css("display", "block");
+    $(".integerDirections").css("display", "block");
     integerChoice = 1;
 })
 
 $("#add").on('click', function() {
-    $("#addDirections").css("display", "block");
+    $(".addDirections").css("display", "block");
     addition = 1;
 })
 
 $("#multiply").on('click', function() {
-    $("#multiplyDirections").css("display", "block");
+    $(".multiplyDirections").css("display", "block");
     multiplication = 1;
 })
 
 $("#subtract").on('click', function() {
-    $("#subtractDirections").css("display", "block");
+    $(".subtractDirections").css("display", "block");
     subtraction = 1;
 })
 
