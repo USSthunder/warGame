@@ -19,7 +19,6 @@ h2 {
 .flex {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .flexColumn {
@@ -27,6 +26,51 @@ h2 {
   flex-direction: column;
   margin: 1rem 2rem;
   width: 30%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.winner {
+  flex-grow: 1;
+}
+
+button {
+  background-color: #4CAF50;
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+span {
+  margin-left: 1rem;
+}
+
+.button:hover {
+  color: red;
+  cursor: pointer;
+}
+
+input {
+  margin: .5rem;
+  font-size: 2rem;
+  padding: .5px;
+  width: 8rem;
+}
+
+#submit {
+    padding:.5rem;
+    margin: .5rem;
+    width: 8rem;
+}
+
+.hidden {
+  display: none;
+}
+
+p {
+  font-size: 1.2rem;
 }
 
 #draw {
@@ -79,6 +123,7 @@ h2 {
 
 .suit {
   width: 15rem;
+  flex-grow: 10;
 }
 
 .suit img {
