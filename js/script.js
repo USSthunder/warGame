@@ -74,10 +74,10 @@ $computerCount.html(computer.length);
 
 function endGame(){
 if(player.length == 0){
-  $winner.html("GAME OVER </br> Computer Wins </br> Player One has no more cards to play.");
+  $winner.html("GAME OVER </br> Computer Wins </br> You have no more cards to play.");
 }
 if(computer.length == 0){
-  $winner.html("GAME OVER </br> Player Wins </br> Player Two has no more cards to play.");
+  $winner.html("GAME OVER </br> Player Wins </br> The computer has no more cards to play.");
 }
   $winner.css("color", "red");
   $winner.css("font-weight", "bold");
@@ -312,7 +312,7 @@ function submit() {
          for (i=0; i<playedCards.length; i++) {
            player.push(playedCards[i]);
          }
-         $winner.html("Player One Wins");
+         $winner.html("Player Wins Round");
          $player.css("border-color", "red");
          $playerCount.html(player.length);
          playedCards=[];
@@ -320,7 +320,7 @@ function submit() {
          for (i=0; i<playedCards.length; i++) {
            computer.push(playedCards[i]);
          }
-         $winner.html("Player Two Wins");
+         $winner.html("Computer Wins Round");
          $computer.css("border-color", "red");
          $computerCount.html(computer.length);
          playedCards=[];
@@ -342,7 +342,7 @@ function greater(){
   }
 
   if (number1 > number2) {
-      $winner.html("Player One Wins");
+      $winner.html("Player Wins Round");
       $player.css("border-color", "red");
       for (i=0; i<playedCards.length; i++) {
         player.push(playedCards[i]);
@@ -350,7 +350,7 @@ function greater(){
       $playerCount.html(player.length);
       playedCards=[];
   } else if (number2 > number1){
-      $winner.html("Player Two Wins");
+      $winner.html("Computer Wins Round");
       $computer.css("border-color", "red");
       for (i=0; i<playedCards.length; i++) {
         computer.push(playedCards[i]);
@@ -364,14 +364,13 @@ function greater(){
 $("#mathOptions").on('click', function() {
     $(".hidden").css("display", "none");
     $("#options").css("display", "block");
+    $("#faceCards").css("display", "block");
 })
 
 $("#compare").on('click', function() {
     $("#options").css("display", "none");
     $("#integers").css("display", "block");
     $("#compareDirections").css("display", "block");
-    $("#one").css("display", "block");
-    $("#two").css("display", "block");
     compare = 1;
 })
 
@@ -413,12 +412,12 @@ $("#subtract").on('click', function() {
     subtraction = 1;
 })
 
-$("#one").on('click', function(){
+$("#player").on('click', function(){
   chosen = 1;
   mathCheck();
 })
 
-$("#two").on('click', function(){
+$("#computer").on('click', function(){
   chosen = 2;
   mathCheck();
 })
