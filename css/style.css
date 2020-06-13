@@ -147,7 +147,7 @@ p {
 }
 
 .player {
-  border: solid 1px #000;
+  border: solid 5px #000;
   width: 15rem;
   height: 20rem;
   text-align:center;
