@@ -371,12 +371,14 @@ $("#compare").on('click', function() {
     $("#options").css("display", "none");
     $("#integers").css("display", "block");
     $(".compareDirections").css("display", "block");
+    $("#mathOptions").css("display", "none");
     compare = 1;
 })
 
 $("#arithmetic").on('click', function() {
     $("#options").css("display", "none");
     $("#math").css("display", "block");
+    $("#mathOptions").css("display", "none");
     arithmetic = 1;
 })
 
@@ -387,12 +389,10 @@ $("#math").on('click', function() {
 
 $("#no").on('click', function() {
     $("#integers").css("display", "none");
-    $("#mathOptions").css("display", "none");
 })
 
 $("#yes").on('click', function() {
     $("#integers").css("display", "none");
-    $("#mathOptions").css("display", "none");
     $(".integerDirections").css("display", "block");
     integerChoice = 1;
 })
