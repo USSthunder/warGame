@@ -33,6 +33,9 @@ var multiplication = 0;
 var subtraction = 0;
 var arithmetic = 0;
 
+    var audio1 = new Audio('ting.mp3');
+    var audio2 = new Audio('chime.mp3');
+
 var audio = new Audio('card.mp3');
 
 for (i=1; i<14; i++){
@@ -315,6 +318,8 @@ function submit() {
            player.push(playedCards[i]);
          }
          $winner.html("Player Wins Round");
+         audio.currentTime=0;
+         audio1.play();
          $("#playerName").css("color", "red");
          $playerCount.html(player.length);
          playedCards=[];
@@ -323,6 +328,8 @@ function submit() {
            computer.push(playedCards[i]);
          }
          $winner.html("Computer Wins Round");
+         audio.currentTime=0;
+         audio2.play();
          $("#computerName").css("color", "red");
          $computerCount.html(computer.length);
          playedCards=[];
@@ -345,7 +352,7 @@ function greater(){
 
   if (number1 > number2) {
       $winner.html("Player Wins Round");
-      $("#playerName").css("color", "red");
+      $player.css("border-color", "red");
       for (i=0; i<playedCards.length; i++) {
         player.push(playedCards[i]);
       }
@@ -353,7 +360,7 @@ function greater(){
       playedCards=[];
   } else if (number2 > number1){
       $winner.html("Computer Wins Round");
-      $("#computerName").css("color", "red");
+      $computer.css("border-color", "red");
       for (i=0; i<playedCards.length; i++) {
         computer.push(playedCards[i]);
       }
