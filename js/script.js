@@ -88,6 +88,8 @@ if(computer.length == 0){
 }
 
 $draw.on('click', function() {
+  $("#computerName").css("color", "#000");
+  $("#playerName").css("color", "#000");
   if (arithmetic == 1) {
     $("#submit").css("display", "block");
     $("#playerAnswer").css("display", "block");
@@ -313,7 +315,7 @@ function submit() {
            player.push(playedCards[i]);
          }
          $winner.html("Player Wins Round");
-         $player.css("border-color", "red");
+         $("#playerName").css("color", "red");
          $playerCount.html(player.length);
          playedCards=[];
        } else if (chosen != winner) {
@@ -321,7 +323,7 @@ function submit() {
            computer.push(playedCards[i]);
          }
          $winner.html("Computer Wins Round");
-         $computer.css("border-color", "red");
+         $("#computerName").css("color", "red");
          $computerCount.html(computer.length);
          playedCards=[];
        }
@@ -343,7 +345,7 @@ function greater(){
 
   if (number1 > number2) {
       $winner.html("Player Wins Round");
-      $player.css("border-color", "red");
+      $("#playerName").css("color", "red");
       for (i=0; i<playedCards.length; i++) {
         player.push(playedCards[i]);
       }
@@ -351,7 +353,7 @@ function greater(){
       playedCards=[];
   } else if (number2 > number1){
       $winner.html("Computer Wins Round");
-      $computer.css("border-color", "red");
+      $("#computerName").css("color", "red");
       for (i=0; i<playedCards.length; i++) {
         computer.push(playedCards[i]);
       }
