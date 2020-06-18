@@ -381,6 +381,7 @@ $("#compare").on('click', function() {
     $("#integers").css("display", "block");
     $(".compareDirections").css("display", "block");
     $("#mathOptions").css("display", "none");
+    $("#directions").css("display", "block");
     compare = 1;
 })
 
@@ -388,6 +389,7 @@ $("#arithmetic").on('click', function() {
     $("#options").css("display", "none");
     $("#math").css("display", "block");
     $("#mathOptions").css("display", "none");
+    $("#directions").css("display", "block");
     arithmetic = 1;
 })
 
