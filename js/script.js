@@ -387,6 +387,7 @@ $("#compare").on('click', function() {
     $("#mathOptions").css("display", "none");
     $("#directions").css("display", "block");
     compare = 1;
+
     $player.on('click', function(){
       chosen = 1;
       mathCheck();
@@ -400,10 +401,11 @@ $("#compare").on('click', function() {
 
 $("#arithmetic").on('click', function() {
     $("#options").css("display", "none");
-    $("#math").css("display", "block");
+    $("#math").css("display", "flex");
     $("#mathOptions").css("display", "none");
     $("#directions").css("display", "block");
     arithmetic = 1;
+
     $player.on('click', function(){
       chosen = 1;
       mathCheck();
