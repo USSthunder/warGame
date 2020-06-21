@@ -102,7 +102,7 @@ $draw.on('click', function() {
     $("#playerAnswer").css("display", "block");
   }
 
-  $('input').val('');
+  $('input').val(''); //This empties out the input box.
 
     assign();
 })
