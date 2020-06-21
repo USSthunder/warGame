@@ -399,22 +399,13 @@ $("#compare").on('click', function() {
     })
 })
 
+//When the player clicks on arithmetic
 $("#arithmetic").on('click', function() {
     $("#options").css("display", "none");
     $("#math").css("display", "flex");
     $("#mathOptions").css("display", "none");
     $("#directions").css("display", "block");
     arithmetic = 1;
-
-    $player.on('click', function(){
-      chosen = 1;
-      mathCheck();
-    })
-
-    $computer.on('click', function(){
-      chosen = 2;
-      mathCheck();
-    })
 })
 
 $("#math").on('click', function() {
