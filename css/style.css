@@ -17,6 +17,15 @@ header {
   display: none;
 }
 
+#math {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#math span {
+  padding: 10px;
+}
+
 .mobile {
   display: none;
 }
@@ -164,6 +173,11 @@ p {
 }
 
 @media only screen and (max-width: 850px) {
+
+  .logo {
+    width: 20%;
+  }
+
   .flex{
     flex-direction: column;
   }
@@ -181,5 +195,15 @@ p {
 
   .wide {
     display:none;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  body {
+    margin:0;
+  }
+
+  .logo {
+    width: 30%;
   }
 }

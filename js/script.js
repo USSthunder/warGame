@@ -71,6 +71,9 @@ cards.splice(0, half);
 
 computer = cards;
 
+//Turn off the ability to click the winner until math options is chosen
+$computer.unbind("click");
+$player.unbind("click");
 
 $playerCount.html(player.length);
 $computerCount.html(computer.length);
@@ -93,6 +96,7 @@ if(computer.length == 0){
 $draw.on('click', function() {
   $("#computerName").css("color", "#000");
   $("#playerName").css("color", "#000");
+  $("#optionSection").css("display", "none");
   if (arithmetic == 1) {
     $("#submit").css("display", "block");
     $("#playerAnswer").css("display", "block");
@@ -383,6 +387,15 @@ $("#compare").on('click', function() {
     $("#mathOptions").css("display", "none");
     $("#directions").css("display", "block");
     compare = 1;
+    $player.on('click', function(){
+      chosen = 1;
+      mathCheck();
+    })
+
+    $computer.on('click', function(){
+      chosen = 2;
+      mathCheck();
+    })
 })
 
 $("#arithmetic").on('click', function() {
@@ -391,6 +404,15 @@ $("#arithmetic").on('click', function() {
     $("#mathOptions").css("display", "none");
     $("#directions").css("display", "block");
     arithmetic = 1;
+    $player.on('click', function(){
+      chosen = 1;
+      mathCheck();
+    })
+
+    $computer.on('click', function(){
+      chosen = 2;
+      mathCheck();
+    })
 })
 
 $("#math").on('click', function() {
@@ -423,14 +445,5 @@ $("#subtract").on('click', function() {
     subtraction = 1;
 })
 
-$("#player").on('click', function(){
-  chosen = 1;
-  mathCheck();
-})
-
-$("#computer").on('click', function(){
-  chosen = 2;
-  mathCheck();
-})
 
 }); //closes document ready
