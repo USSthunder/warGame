@@ -124,24 +124,8 @@ p {
   cursor: pointer;
 }
 
-#draw:after {
-  content: "";
-  background: #90EE90;
-  display: block;
-  position: absolute;
-  padding-top: 300%;
-  padding-left: 350%;
-  margin-left: -20px!important;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.8s
-}
-
-#draw:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0s
+#draw:hover {
+  opacity:90%;
 }
 
 .number {
@@ -168,7 +152,6 @@ p {
   width: 15rem;
   height: 20rem;
   text-align:center;
-
 }
 
 @media only screen and (max-width: 850px) {
@@ -205,4 +188,29 @@ p {
   .logo {
     width: 30%;
   }
+
+  .player {
+    text-align:center;
+    height:11rem;
+  }
+
+  .suit img {
+    padding:.3rem;
+    width: 10%;
+  }
+
+  .number img {
+    height: 5rem;
+    width: auto;
+  }
+
+  #draw {
+    padding: 2px;
+  }
+
+  #playerName,    /*This could be made two player. You could have players input their names.*/
+  #computerName {
+    font-size: 1.5rem;
+  }
+
 }
