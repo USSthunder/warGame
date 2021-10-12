@@ -36,7 +36,7 @@ var arithmetic = 0;
     var audio1 = new Audio('ting.mp3');
     var audio2 = new Audio('chime.mp3');
 
-var audio = new Audio('card.mp3');
+var audio = new Audio('dealing-card.mp3');
 
 for (i=1; i<14; i++){
   for (k=1; k<5; k++) {
